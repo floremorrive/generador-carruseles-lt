@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generador de Carruseles · La Tribuna</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header>
+  <h1>Generador de <span>Carruseles</span> · La Tribuna</h1>
+  <p>Arma un carrusel (portada + hasta 5 láminas + [Autor] + CTA del tema + CTA fijo) y descarga cada lámina en PNG, 1080×1440.</p>
+</header>
+
+<main>
+  <section id="form">
+
+    <fieldset>
+      <legend>1. Tipo y tema</legend>
+      <label>Tipo de carrusel
+        <select id="tipo"></select>
+      </label>
+      <label>Tema / categoría (aparece en la portada y al pie de cada lámina)
+        <select id="tema"></select>
+      </label>
+      <label>Plantilla (diseño y paleta)
+        <select id="plantilla"></select>
+      </label>
+      <p class="gen-hint" id="hint-plantilla"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>2. Portada</legend>
+      <label>Imagen de portada
+        <input type="file" id="portada-foto" accept="image/*">
+      </label>
+      <div class="foto-controls" hidden>
+        <label>Zoom <input type="range" id="p-zoom" min="1" max="2" step="0.01" value="1"></label>
+        <label>Horizontal <input type="range" id="p-posx" min="-200" max="200" step="1" value="0"></label>
+        <label>Vertical <input type="range" id="p-posy" min="-200" max="200" step="1" value="0"></label>
+      </div>
+      <label>Título de portada
+        <textarea id="portada-titulo" rows="2" placeholder="Título del carrusel"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset id="wrap-autor" hidden>
+      <legend>3. Autor (Puntos de vista)</legend>
+      <label>Nombre
+        <input type="text" id="autor-nombre" placeholder="Nombre del autor">
+      </label>
+      <label>Perfil / cargo
+        <input type="text" id="autor-perfil" placeholder="Ej. Columnista · Politólogo">
+      </label>
+      <label>Red social (usted escribe el @, la caja ya está puesta)
+        <input type="text" id="autor-red" placeholder="@usuario">
+      </label>
+      <label>Foto del autor
+        <input type="file" id="autor-foto" accept="image/*">
+      </label>
+      <div class="foto-controls autor-foto-controls" hidden>
+        <label>Zoom <input type="range" id="a-zoom" min="1" max="2" step="0.01" value="1"></label>
+        <label>Horizontal <input type="range" id="a-posx" min="-200" max="200" step="1" value="0"></label>
+        <label>Vertical <input type="range" id="a-posy" min="-200" max="200" step="1" value="0"></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>4. Láminas de desarrollo (hasta 5)</legend>
+      <p class="gen-hint">
+        Escriba aquí como en una hoja de cálculo. Las láminas de desarrollo no llevan título,
+        solo el texto. También puede <b>pegar directamente desde Excel</b> (copie la columna y
+        pegue sobre la tabla), o importar/exportar un CSV.
+      </p>
+      <div class="tabla-wrap">
+        <table id="tabla-laminas">
+          <thead><tr><th>#</th><th>Texto</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="gen-botones fila">
+        <button type="button" id="btn-add-fila">+ Agregar lámina</button>
+        <button type="button" id="btn-csv-export">Exportar CSV</button>
+        <label class="btn-file">Importar CSV
+          <input type="file" id="csv-import" accept=".csv" hidden>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>5. CTA del tema</legend>
+      <label>Pregunta que invite a comentar sobre este contenido (lámina propia, antes del CTA fijo)
+        <textarea id="pregunta" rows="2" placeholder="¿Pregunta que invita a comentar?"></textarea>
+      </label>
+    </fieldset>
+
+  </section>
+
+  <section id="preview">
+    <div id="slides"></div>
+    <div class="gen-botones">
+      <button type="button" id="btn-descargar-todo">Descargar todas las láminas (.zip)</button>
+    </div>
+  </section>
+</main>
+
+<script src="assets/lib/fflate.min.js"></script>
+<script src="js/data.js?_=7"></script>
+<script src="js/render.js?_=7"></script>
+<script src="js/app.js?_=7"></script>
+</body>
+</html>
