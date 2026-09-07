@@ -31,10 +31,11 @@ const LIMITES = { minLaminas: 1, maxLaminas: 5, laminasPorDefecto: 2 };
 // Texto FIJO del CTA final — regla no negociable (2026-09-05/06): se usa SIEMPRE,
 // sin importar lo que diga cualquier plantilla .pptx de referencia.
 // "latribunacolombia.co" va en negrilla en las dos apariciones.
+// Corregido 2026-09-07: todo en "usted" (antes mezclaba tuteo — "Sigue"/"no te pierdas" — con "Lea").
 const CTA_FIJO = {
-  titulo: "Sigue a @latribunacolombia",
-  linea1: "para que no te pierdas nuestro contenido",
-  linea2pre: "Lea la nota completa en ",
+  titulo: "Siga a @latribunacolombia",
+  linea1: "para no perderse más contenido como este.",
+  linea2pre: "Lea la noticia completa en ",
   linea2bold: "latribunacolombia.co"
 };
 
