@@ -23,10 +23,10 @@ const TIPOS_CARRUSEL = [
   { id: "puntos-vista", nombre: "Puntos de vista",   autor: true,  temas: TEMAS_PUNTOS_VISTA }
 ];
 
-// Estructura: 1 portada + láminas de desarrollo (2 visibles por defecto, hasta 5) +
+// Estructura: 1 portada + láminas de desarrollo (2 visibles por defecto, hasta 10) +
 // [1 lámina de Autor, solo Puntos de vista] + 1 CTA del tema (pregunta que invita a
 // comentar, lámina propia, antes del CTA fijo) + 1 CTA fijo (siempre el último, texto fijo).
-const LIMITES = { minLaminas: 1, maxLaminas: 5, laminasPorDefecto: 2 };
+const LIMITES = { minLaminas: 1, maxLaminas: 10, laminasPorDefecto: 2 };
 
 // Texto FIJO del CTA final — regla no negociable (2026-09-05/06): se usa SIEMPRE,
 // sin importar lo que diga cualquier plantilla .pptx de referencia.
