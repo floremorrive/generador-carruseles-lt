@@ -394,7 +394,7 @@ const TPL_especiales01 = {
     fillBox(ctx, -19, 102, 105 + temaWEsp01 + 22, 40, COLORS.vino, 100); // +22 de holgura real (el texto medido en canvas no debe tocar el borde)
     paragraph(ctx, temaTxtEsp01, 86, 131, 900, "700 26px 'Rajdhani'", COLORS.cream, 40);
     fitTitle(ctx, d.titulo, 100, 387, 880, 857,                        // Titular de portada (recuadro real, centrado)
-      88, 700, "Rajdhani", COLORS.cream, 101, null, "middle");         // interlineado más holgado (1.15x), no amontonado
+      90, 700, "Rajdhani", COLORS.cream, 104, null, "middle");         // interlineado más holgado (1.15x), no amontonado
     fillBox(ctx, 86, 900, 370, 7, COLORS.gold, 100);                   // Regla
     drawLema(ctx, 86, 1358, 25, COLORS.cream, "left");                 // Lema (FIJO)
     drawLogo(ctx, "white", 86, 1206.8, 320);                           // Imagen 15 (logo)
@@ -455,7 +455,7 @@ const TPL_especiales02 = {
       { pos_pct: 100, hex: "#000000", alpha_pct: 100 }
     ], 90);
     drawPill(ctx, { x: 82.31, y: 94.15, w: 178, h: 37, r: 6, boxHex: COLORS.dark, color: COLORS.gold, size: 26 }, d.tema.toUpperCase());
-    fitTitle(ctx, d.titulo, 86, 862, 912.58, 1186.46, 96, 700, "Rajdhani", COLORS.cream, 110, null, "middle");
+    fitTitle(ctx, d.titulo, 86, 862, 912.58, 1186.46, 98, 700, "Rajdhani", COLORS.cream, 113, null, "middle");
     drawLogo(ctx, "white", 21.96, 1250.41, 384.42);
   },
   desarrollo(ctx, d){
@@ -495,7 +495,7 @@ const TPL_pasaMundo01 = {
     fillBox(ctx, 0, 0, W, H, COLORS.dark, 100);
     if (d.imagen) drawCover(ctx, d.imagen, 0, 0, W, H, d.imagenTransform);
     fillBox(ctx, 108, 738.67*SY_pem01, 864, 503.33*SY_pem01, COLORS.cream, 100); // tarjeta
-    fitTitle(ctx, d.titulo, 192, 800, 735, 1120, 64, 700, "Antonio", COLORS.dark, 74, null, "middle");
+    fitTitle(ctx, d.titulo, 192, 800, 735, 1120, 66, 700, "Antonio", COLORS.dark, 76, null, "middle");
     drawLineH(ctx, 172.66, 1125.3, 734.67, 3, COLORS.gold);
     drawLogo(ctx, "white", 172, 126.0, 270);
     drawPill(ctx, { x: 178.86, y: 1215.7, w: 230, h: 55.1, borderHex: COLORS.gold, borderWidth: 1.5,
@@ -547,7 +547,7 @@ const TPL_pasaMundo01 = {
 const TPL_pasaMundo02 = {
   portada(ctx, d){
     fillBox(ctx, 0, 0, W, H, COLORS.cream, 100);
-    fitTitle(ctx, d.titulo, 108, 175, 760, 360, 76, 700, "Antonio", COLORS.dark, 87, null, "middle");
+    fitTitle(ctx, d.titulo, 108, 175, 760, 360, 78, 700, "Antonio", COLORS.dark, 90, null, "middle");
     if (d.imagen) drawCover(ctx, d.imagen, 108, 560, 864, 690, d.imagenTransform);
     else fillBox(ctx, 108, 560, 864, 690, COLORS.dark, 100);
     drawPill(ctx, { x: 732.73, y: 522, w: 347.27, h: 54, r: 8, boxHex: COLORS.vino,  // ancho fijo real (llega hasta el borde derecho)
@@ -597,7 +597,7 @@ const TPL_pasaMundo03 = {
     drawPill(ctx, { x: 84, y: 96.58, w: 0, h: 60, boxHex: COLORS.gold,        // ancho ajustado al texto real (el .pptx trae "PASA EN EL MUNDO"
       color: COLORS.dark, size: 32, font: "Antonio", weight: 700, padx: 16 }, d.tema.toUpperCase()); // con ~16px de aire por lado; con un tema más corto/largo no debe sobrar ni faltar espacio)
     drawLogo(ctx, "mono:#FFFFFF", 848.1, 96, 133.9);                        // logo real: monograma blanco (no el wordmark)
-    fitTitle(ctx, d.titulo, 108, 380, 889.92, 634, 72, 700, "Antonio", COLORS.cream, 83, null, "middle");
+    fitTitle(ctx, d.titulo, 108, 380, 889.92, 634, 74, 700, "Antonio", COLORS.cream, 85, null, "middle");
     drawLineH(ctx, 128, 709, 769, 2, COLORS.gold);
     drawCornerMarks(ctx, COLORS.gold);
   },
@@ -646,7 +646,7 @@ const TPL_pasaMundo04 = {
     // no centrado en ella (por eso se dibujan por separado, cada uno con su propio eje).
     drawRotatedRect(ctx, 1058.615, 1219.385, 436.91, 42.77, COLORS.dark);
     drawRotatedText(ctx, 1060.465, 1110.56, 364.13, 40, d.tema.toUpperCase(), "400 32px 'Antonio'", COLORS.gold, 20);
-    fitTitle(ctx, d.titulo, 111.32, 836.4, 832.07, 1046.3, 66, 700, "Antonio", COLORS.dark, 76, null, "middle"); // rango real (y=836.4..1046.3): más aire, ya no se comprime
+    fitTitle(ctx, d.titulo, 111.32, 836.4, 832.07, 1046.3, 68, 700, "Antonio", COLORS.dark, 78, null, "middle"); // rango real (y=836.4..1046.3): más aire, ya no se comprime
     drawLogo(ctx, COLORS.dark, 42.77, 1236.93, 260);
     drawLema(ctx, 98.5, 1358, 26, COLORS.dark, "left");                // Lema (FIJO)
   },
@@ -699,7 +699,7 @@ const TPL_pasaRegiones01 = {
       { pos_pct: 100, hex: "#000000", alpha_pct: 96 }
     ], 90);
     paragraph(ctx, d.tema.toUpperCase(), 108, 787, 650, "700 26px 'Antonio'", COLORS.gold, 30);
-    fitTitle(ctx, d.titulo, 108, 940, 820, 1158, 82, 700, "Antonio", COLORS.cream, 94, null, "middle");
+    fitTitle(ctx, d.titulo, 108, 940, 820, 1158, 84, 700, "Antonio", COLORS.cream, 97, null, "middle");
     drawLogo(ctx, "white", 108, 1278.45, 288.24);
   },
   desarrollo(ctx, d){
@@ -758,7 +758,7 @@ const TPL_pasaRegiones02 = {
     ], 90);
     drawPill(ctx, { x: 74.16, y: 94, w: 223.63, h: 40, r: 2, boxHex: COLORS.gold,  // ancho fijo real, esquinas casi rectas
       color: COLORS.dark, size: 26, font: "Antonio", weight: 700, padx: 16 }, d.tema.toUpperCase());
-    fitTitle(ctx, d.titulo, 110, 810, 860, 1080, 94, 700, "Antonio", COLORS.cream, 108, "center", "middle");
+    fitTitle(ctx, d.titulo, 110, 810, 860, 1080, 96, 700, "Antonio", COLORS.cream, 110, "center", "middle");
     drawLogo(ctx, "white", 390, 1221.78, 300);
     drawLema(ctx, 540, 1400, 26, COLORS.gold, "center");               // Lema (FIJO), centrado debajo del logo
   },
@@ -808,7 +808,7 @@ const TPL_pasaRegiones03 = {
     drawLogo(ctx, "white", 86, 103.61, 237.96);
     drawLema(ctx, 86, 232, 27, COLORS.gold, "left");                   // Lema (FIJO), debajo del logo
     paragraph(ctx, d.tema.toUpperCase(), 126.41, 895, 638, "400 30px 'Antonio'", COLORS.gold, 34);
-    fitTitle(ctx, d.titulo, 126.41, 1000, 861.29, 1290, 72, 700, "Antonio", COLORS.cream, 83, null, "middle");
+    fitTitle(ctx, d.titulo, 126.41, 1000, 861.29, 1290, 74, 700, "Antonio", COLORS.cream, 85, null, "middle");
     paragraph(ctx, "@LATRIBUNACOLOMBIA", 126.41, 1349, 327.46, "400 26px 'Antonio'", COLORS.cream, 30);
   },
   // Corregido 2026-09-06: varios colores estaban en vino/rojo — la paleta REAL de este
@@ -861,7 +861,7 @@ const TPL_temas03 = {
     drawLogo(ctx, "white", 86, 103.61, 237.96);
     drawLema(ctx, 86, 232, 27, COLORS.cream, "left");                   // Lema (FIJO): color propio (crema, no dorado)
     paragraph(ctx, d.tema.toUpperCase(), 126.41, 895, 638, "400 28px 'Antonio'", COLORS.vino, 32); // color y tamaño propios
-    fitTitle(ctx, d.titulo, 126.41, 1000, 861.29, 1290, 72, 700, "Antonio", COLORS.cream, 83, null, "middle");
+    fitTitle(ctx, d.titulo, 126.41, 1000, 861.29, 1290, 74, 700, "Antonio", COLORS.cream, 85, null, "middle");
     paragraph(ctx, "@LATRIBUNACOLOMBIA", 126.41, 1349, 327.46, "400 26px 'Antonio'", COLORS.cream, 30);
   },
   desarrollo(ctx, d){
@@ -900,7 +900,7 @@ const TPL_pasaRegiones04 = {
     if (d.imagen) drawCover(ctx, d.imagen, 0, 0, W, 960, d.imagenTransform);
     else fillBox(ctx, 0, 0, W, 960, COLORS.dark, 100);
     fillBox(ctx, 0, 0, W, 960, "#7F7F7F", 8);
-    fitTitle(ctx, d.titulo, 103.28, 1060, 873.44, 1252, 78, 700, "Rajdhani", COLORS.dark, 90, null, "middle");
+    fitTitle(ctx, d.titulo, 103.28, 1060, 873.44, 1252, 80, 700, "Rajdhani", COLORS.dark, 92, null, "middle");
     drawPill(ctx, { x: 90.36, y: 1320, w: 0, h: 49.85, color: COLORS.vino,
       size: 28, font: "Inter Tight", weight: 700, padx: 0 }, d.tema);
     drawLogo(ctx, "vino", 817.54, 1291.38, 200);
@@ -952,7 +952,7 @@ const TPL_puntosVista01 = {
     // usa la categoría "Puntos de vista" (no hay otras opciones de tema aquí).
     drawPill(ctx, { x: 108, y: 108, w: 252.1, fixedW: true, h: 54, r: 7, boxHex: COLORS.gold,
       color: COLORS.dark, size: 32, font: "Rajdhani", weight: 700, padx: 16 }, d.tema.toUpperCase());
-    fitTitle(ctx, d.titulo, 108, 850, 850, 1130, 78, 700, "Rajdhani", COLORS.cream, 90, null, "middle");
+    fitTitle(ctx, d.titulo, 108, 850, 850, 1130, 80, 700, "Rajdhani", COLORS.cream, 92, null, "middle");
     drawLogo(ctx, "white", 720, 1240.69, 290);
     drawLema(ctx, 720, 1373, 25, COLORS.gold, "left");                 // Lema (FIJO), texto plano sin fondo
   },
@@ -1037,7 +1037,7 @@ const TPL_puntosVista02 = {
     // pensado para 32px) para que el texto sea lo que realmente se note más grande.
     drawPill(ctx, { x: 108, y: 144, w: 0, h: 68, r: 0, boxHex: COLORS.gold,
       color: COLORS.dark, size: 40, font: "Antonio", weight: 400, padx: 20 }, d.tema.toUpperCase());
-    fitTitle(ctx, d.titulo, 108, 940, 886.83, 1074, 76, 700, "Antonio", COLORS.cream, 87, null, "middle");
+    fitTitle(ctx, d.titulo, 108, 940, 886.83, 1074, 78, 700, "Antonio", COLORS.cream, 90, null, "middle");
     paragraph(ctx, "LATRIBUNACOLOMBIA.CO", 108, 1228, 365.47, "400 30px 'Antonio'", COLORS.gold, 34);
     drawLogo(ctx, "white", 770, 1075, 250);                           // más grande y ubicado en el espacio libre entre el título (termina en 1074) y la URL (empieza en 1228), sin invadir ninguno
   },
@@ -1118,7 +1118,7 @@ const TPL_puraPaja01 = {
     // pero un título más largo (varias líneas) queda tapado por la cámara. Se limita el
     // ancho a 480 (hasta x=550, antes de la imagen) para que NINGÚN título, sin importar
     // su longitud, quede debajo de ella.
-    fitTitle(ctx, d.titulo, 70, 238, 480, 858, 98, 700, "Rajdhani", COLORS.cream, 113, null, "middle");
+    fitTitle(ctx, d.titulo, 70, 238, 480, 858, 100, 700, "Rajdhani", COLORS.cream, 115, null, "middle");
     drawLogo(ctx, "white", 72, 1236.47, 288.24);
     drawLema(ctx, 72, 1365, 25, COLORS.cream, "left");                 // Lema (FIJO)
   },
@@ -1169,7 +1169,7 @@ const TPL_quePasa01 = {
     else fillBox(ctx, 0, 850, W, 590, COLORS.dark, 100);
     paragraph(ctx, d.tema.toUpperCase(), 82, 165, 720, "700 27px 'Rajdhani'", COLORS.gold, 30);
     fillBox(ctx, 82, 590, 58, 61, COLORS.gold, 100);
-    fitTitle(ctx, d.titulo, 82, 245, 875, 535, 76, 700, "Rajdhani", COLORS.cream, 88, null, "middle");
+    fitTitle(ctx, d.titulo, 82, 245, 875, 535, 78, 700, "Rajdhani", COLORS.cream, 90, null, "middle");
     drawLogo(ctx, "white", 82.12, 1252, 299.76);
     drawLema(ctx, 82, 1390, 19, COLORS.cream, "left");                 // Lema (FIJO)
   },
@@ -1225,7 +1225,7 @@ const TPL_quePasa02 = {
     ], 90);
     drawPill(ctx, { x: 72, y: 78, w: 0, h: 47, r: 7, boxHex: COLORS.vino,   // ancho ajustado al texto real (el tema varía; con "QUÉ ESTÁ PASANDO" da 296.33, como el original, pero no se queda fijo con temas más cortos)
       color: COLORS.cream, size: 22, font: "Rajdhani", weight: 700, padx: 18 }, d.tema.toUpperCase());
-    fitTitle(ctx, d.titulo, 110, 780, 860, 1020, 92, 700, "Rajdhani", COLORS.dark, 106, "center", "middle");
+    fitTitle(ctx, d.titulo, 110, 780, 860, 1020, 94, 700, "Rajdhani", COLORS.dark, 108, "center", "middle");
     fillBox(ctx, 410, 1040, 260, 7, COLORS.vino, 100);
     drawLogo(ctx, "vino", 390, 1189.96, 300);
     drawLema(ctx, 540, 1358, 25, COLORS.dark, "center");               // Lema (FIJO)
@@ -1270,7 +1270,7 @@ const TPL_quePasa02 = {
 const TPL_quePasa03 = {
   portada(ctx, d){
     fillBox(ctx, 0, 0, W, H, COLORS.dark, 100);
-    fitTitle(ctx, d.titulo, 108, 260, 864, 470, 64, 700, "Antonio", COLORS.cream, 74, null, "middle");
+    fitTitle(ctx, d.titulo, 108, 260, 864, 470, 66, 700, "Antonio", COLORS.cream, 76, null, "middle");
     if (d.imagen) drawCover(ctx, d.imagen, 108, 589, 864, 691, d.imagenTransform);
     else fillBox(ctx, 108, 589, 864, 691, "#3a3733", 100);
     fillBox(ctx, 108, 589, 864, 691, "#7F7F7F", 8);
@@ -1317,7 +1317,7 @@ const TPL_temas01 = {
     fillBox(ctx, 0, 0, W, H, COLORS.cream, 100);
     if (d.imagen) drawCover(ctx, d.imagen, 106, 108, 866, 576, d.imagenTransform);
     else fillBox(ctx, 106, 108, 866, 576, COLORS.dark, 100);
-    fitTitle(ctx, d.titulo, 108, 850, 720, 1000, 78, 700, "Antonio", COLORS.dark, 90, null, "middle");
+    fitTitle(ctx, d.titulo, 108, 850, 720, 1000, 80, 700, "Antonio", COLORS.dark, 92, null, "middle");
     fillBox(ctx, 108, 1128, 542, 3, COLORS.vino, 100);
     drawPill(ctx, { x: 770, y: 1103, w: 310, h: 54, r: 8, boxHex: COLORS.vino, // ancho fijo real, alineada con la línea roja
       color: COLORS.cream, size: 26, font: "Antonio", weight: 700, padx: 18 }, d.tema.toUpperCase());
@@ -1372,7 +1372,7 @@ const TPL_temas02 = {
     else fillBox(ctx, 0, 780, W, 660, "#3a3733", 100);
     drawPill(ctx, { x: 84, y: 92, w: 236, h: 54, r: 8, boxHex: COLORS.gold,   // ancho fijo real del .pptx
       color: COLORS.dark, size: 26, font: "Rajdhani", weight: 700, padx: 18 }, d.tema.toUpperCase());
-    fitTitle(ctx, d.titulo, 126, 400, 830, 690, 78, 700, "Rajdhani", COLORS.gold, 90, null, "middle");
+    fitTitle(ctx, d.titulo, 126, 400, 830, 690, 80, 700, "Rajdhani", COLORS.gold, 92, null, "middle");
     fillBox(ctx, 98, 720, 872, 12.27, COLORS.gold, 100);
     drawLogo(ctx, "white", 760, 74.9, 260);
     drawLema(ctx, 760, 205, 25, COLORS.cream, "left");                 // Lema (FIJO), debajo del logo
@@ -1433,7 +1433,7 @@ const TPL_temas04 = {
     fitTitle(ctx, (d.tema || "Temas").toUpperCase(), 296.81, 1219.62, 566.5, 1293.62, 40, 700, "Rajdhani", COLORS.gold, 44, null, "middle"); // alineado a la izquierda (real, no centrado)
     // Título real: x=184.23,y=819.08,w=766.54,h=323.92, vAnchor TOP (no middle) — el
     // bloque empieza exactamente en y=819.08, no se centra en un rango más bajo.
-    fitTitle(ctx, d.titulo.toUpperCase(), 184.23, 819.08, 766.54, 1143, 60, 700, "Rajdhani", COLORS.cream, 69);
+    fitTitle(ctx, d.titulo.toUpperCase(), 184.23, 819.08, 766.54, 1143, 62, 700, "Rajdhani", COLORS.cream, 71);
   },
   desarrollo(ctx, d){
     fillBox(ctx, 0, 0, W, H, COLORS.vino, 100);
